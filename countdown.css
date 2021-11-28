@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgb(61, 17, 36) 0%,
+    rgba(8, 101, 212, 1) 100%
+  );
+}
+
+.container {
+  margin: 15vh 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container img {
+  max-width: 500px;
+  height: auto;
+  display: block;
+  border-radius: 0.25rem;
+  cursor: zoom-in;
+}
+
+.text {
+  width: 500px;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+.text h1 {
+  text-transform: capitalize;
+}
+
+.counter {
+  display: flex;
+}
+
+.counter div {
+  background-color: rgb(0, 0, 46);
+  color: white;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.7;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+@media (max-width: 800px) {
+  .bigBox {
+    margin: 15vh 3vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 3vw;
+  }
+}
+
+/*
+==============
+header
+==============
+*/
+.navbar {
+  height: 10%;
+  padding: 0 10vw;
+  background-color: var(--grey-300);
+  height: 3.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  line-height: 2.5;
+}
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  place-items: center;
+  text-transform: capitalize;
+}
+
+/*
+==============
+main
+==============
+*/
+
+main {
+  height: 70vh;
+}
+
+/*
+==============
+Modal
+==============
+*/
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(32, 4, 9, 0.698) 100%
+  );
+  transition: all 0.3 ease-in-out;
+  visibility: hidden;
+  object-fit: contain;
+}
+
+.modalContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 30px auto;
+  place-items: center;
+  object-fit: contain;
+}
+
+.SG-modalImg {
+  max-width: 100%;
+  height: 90vh;
+  cursor: zoom-out;
+  /* display: block; */
+}
+
+.closeBtn {
+  transition: var(--transition1);
+  color: var(--clr-primary-5);
+  width: 25px;
+  background-color: #00000000;
+  border: 0px #00000000;
+  margin-left: 90%;
+}
+
+.closeBtn:hover {
+  transform: rotate(540deg);
+  transition: var(--transition1);
+}
+
+.is_visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
