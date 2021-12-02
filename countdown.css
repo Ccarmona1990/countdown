@@ -26,9 +26,10 @@ body {
 
 .container {
   margin: 15vh 3vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: auto 50vw;
+  gap: 1vw;
+  word-wrap: break-word;
 }
 
 .container img {
@@ -39,12 +40,14 @@ body {
   cursor: zoom-in;
 }
 
+.containerImg{
+  max-width: 530px;
+}
+
 .text {
   width: 500px;
-  display: grid;
-  grid-template-rows: auto;
-  gap: 20px;
 }
+
 .text h1 {
   text-transform: capitalize;
 }
