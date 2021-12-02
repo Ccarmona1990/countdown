@@ -23,7 +23,6 @@ const days = [
     'Thursday',
     'Friday',
     'Saturday'
-
 ]
 const months = [
     'January',
@@ -38,8 +37,6 @@ const months = [
     'October',
     'November',
     'December'
-
-
 ]
 
 const month = today.getMonth();
@@ -124,8 +121,6 @@ getRemainingTime();
 function zoomIn_n_Out() {
     const SGimg = getElement('.SG-A12');
     const modal = getElement('.modal')
-
-
     const btnsZIO = [modal, SGimg];
     
 btnsZIO.forEach(function (item) {
